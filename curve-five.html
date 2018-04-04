@@ -4,21 +4,22 @@
 	<head>
 
 		<meta charset="UTF-8">
-		<title>Curve Five</title>
+		<title>Motion Library | Humparoo</title>
 		
-		<link rel="stylesheet" href="./css/normalize.css">
+		<link rel="stylesheet" href="./css/reset.css">
 		<link rel="stylesheet" href="./css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Rubik:300,400,500,700" rel="stylesheet">
 		<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
 	</head>
 
-	<body>
+	<body class="curve-five">
 
 		<nav>
 
-			<a class="menu" href="#"><i class="fas fa-bars"></i>Show more</a>
+			<!-- <a class="menu" href="#"><i class="fas fa-bars"></i>Show more</a>
 			<a class="menu hide" href="#"><i class="fas fa-times"></i></i>Hide</a>
-			<!-- <a class="menu" href="#"><i class="fas fa-chevron-down"></i></i>Show more</a>	 -->	
+			<a class="menu" href="#"><i class="fas fa-chevron-down"></i></i>Show more</a> -->
 			
 			<ul>
 				<li><a href="./index.html">Curve One</a></li>
@@ -32,39 +33,49 @@
 		</nav>
 
 		<section class="curve-editor">
+			
+			<h1>Humparoo</h1>
 
-			<h1>Curve Five</h1>
+			<div class="container">
+				<div id="previewBall" class="preview-ball preview-five" alt="Animation preview ball"></div>
 
-			<div>
-		
-				<span class="preview-ball" alt="Animation preview ball"></span>
-		
-				<div>
-					<span class="speed" id="valueOutput">ms</span>
-    				<input type="range" min="0" max="2000" value="1000" class="slider" id="valueRange">
-    				<a class="play" href="#"><i class="fas fa-play"></i></a>
+				<div class="controls">
+
+					<div class="speed-sect">
+						<span id="speed" class="speed"></span><span class="speed"> ms</span>
+					</div> 	
+    				
+    				<div class="slider-sect">
+    					<input type="range" min="0" max="2000" value="600" class="slider" id="range">
+    				</div>
+					
+					<div class="play-sect">
+						<a id="play-btn" class="play" href="Preview motion curve"><i class="fas fa-play"></i></a>
+					</div>
+    			
     			</div>
-
     		</div>
 
-    		<a class="create" href="#">Create CSS</a>
+    		<a id="create" class="create" href="#">Create CSS</a>
 
     	</section>
 
-    	<section class="curve-css">
+    	<section class="curve-css hide">
 
-    		<a class="back" href="#">Back</a>
+    		<!-- <a class="back" href="#">Back</a> -->
 
-    		<div>
+    		<div class="container">
     			
+    			<a id="close"><i id="cross" class="fas fa-times"></i></a>
     			<p>
-  					-webkit-transition: all <span class="speed-paragraph" id="#valueParagraphOne"></span>ms cubic-bezier(0.135, 1.650, 0.930, 1.400);<br/>
-   					-moz-transition: all <span class="speed-paragraph" id="#valueParagraphTwo"></span>ms cubic-bezier(0.135, 1.650, 0.930, 1.400);<br/>
-   					-o-transition: all <span class="speed-paragraph" id="#valueParagraphThree"></span>ms cubic-bezier(0.135, 1.650, 0.930, 1.400);<br/>
-       				transition: all <span class="speed-paragraph" id="#valueParagraphFour"></span>ms cubic-bezier(0.135, 1.650, 0.930, 1.400);<br/>
+  					-webkit-transition: all <span id="valueParagraph"></span>ms cubic-bezier(0.135, 1, 0.930, 1);  /* older webkit */<br/>
+  					-webkit-transition: all <span id="valueParagraphOne"></span>ms cubic-bezier(0.135, 1.650, 0.930, 1.400);<br/>
+   					-moz-transition: all <span id="valueParagraphTwo"></span></span>ms cubic-bezier(0.135, 1.650, 0.930, 1.400);<br/>
+   					-o-transition: all <span id="valueParagraphThree"></span>ms cubic-bezier(0.135, 1.650, 0.930, 1.400);<br/>
+       				transition: all <span id="valueParagraphFour"></span>ms cubic-bezier(0.135, 1.650, 0.930, 1.400);<br/>
        			</p>
 
-       			<a class="copy" href="#">Copy CSS</a>
+       			<!-- <a class="copy" href="#">Copy CSS</a> -->
 
     		</div>
 
@@ -72,7 +83,7 @@
 	
 	<script src="./js/jquery.js"></script>
   	<script src="./js/index.js"></script>
-		
+
 	</body>
 	
 </html>
